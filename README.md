@@ -6,5 +6,4 @@ Generates mountain ranges with clip-path:polygon
 
 ## Roadmap
 
-Snow-capped mountains
-Multi-layer mountains
+Snow-capped mountains? Multi-layer mountains?
