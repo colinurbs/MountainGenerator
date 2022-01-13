@@ -1,0 +1,37 @@
+h1 {
+	color: white;
+	text-shadow: 2px 2px 5px #666666;
+	margin-top: 50px;
+}	
+
+body {
+	font-size: 24px;
+	background: lightskyblue;
+	text-align: center;
+}
+label {
+	display: block;
+	color: white;
+	text-shadow: 2px 2px 5px #666666;
+}
+
+#mountain {
+	background-color: green;
+	height: 500px;
+	display: block; 
+	overflow: visible; 
+	position: relative;
+	z-index: 1;
+	margin-top: 100px;
+	transition: clip-path 1s;
+}
+
+#code {	
+	margin-top: 50px;
+	height: 300px;
+}
+
+#generate {
+	margin-top: 10px;
+	font-size: 24px;
+}
