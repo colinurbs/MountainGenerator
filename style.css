@@ -16,20 +16,58 @@ label {
 	text-shadow: 2px 2px 5px #666666;
 }
 
-#mountain {
+#mountain1,#mountain2,#mountain3 {
 	background-color: green;
-	min-height: 1000;
+	min-height: 1000px;
 	display: block; 
 	overflow: visible; 
 	position: relative;
 	z-index: 1;
 	margin-top: 100px;
 	transition: clip-path 1s;
+	filter: brightness(80%);
+}
+
+#mountain1 {
+	position:absolute;
+	top:400;
+	left:0;
+	right:0;
+	margin-top:50px;
+	z-index:2;
+	background:green;
+	filter: brightness(50%);
+}
+
+#mountain2 {
+	position:absolute;
+	top:390;
+	left:0;
+	right:0;
+	margin-top:50px;
+	z-index:1;
+	background:green;
+	filter: brightness(75%);
+}
+
+#mountain3 {
+	position:absolute;
+	top:380;
+	left:0;
+	right:0;
+	margin-top:50px;
+	z-index:0;
+	background:green;
+	filter: brightness(100%);
 }
 
 #code {	
 	margin-top: 50px;
 	height: 300px;
+}
+
+.mountain-wrap {
+  filter: drop-shadow(10px 10px 10px #eee);
 }
 
 #generate {

@@ -1,13 +1,12 @@
 $(document).ready(function(){
-	$('input').change(function(){
-		makeMountains();
-	});
-
 	$('#generate').click(function(){
-		makeMountains();
+		$('#code').html('');
+		makeMountains('mountain1');
+		makeMountains('mountain2');
+		makeMountains('mountain3');
 	});
 
-	function makeMountains(){
+	function makeMountains(id){
 
 		var nodes = $('#nodes').val();
 		var scale = $('#scale').val();
@@ -16,11 +15,8 @@ $(document).ready(function(){
 		var steps = 100 / nodes;
 		var step = 0;
 		var last = 0;
-		console.log(steps);
 		
 		for (let i = 0; i < nodes; i++) {
-
-			
 			string += step + '% ' + getValue() + 'px';
 			string +=', '
 			step = step + steps;
@@ -29,22 +25,21 @@ $(document).ready(function(){
 
 		string += step + '% ' + getValue() + 'px';
 		string +=','; 
-		var el = document.getElementById("mountain");
+		var el = document.getElementById(id);
+		
 		el.style.clipPath = "polygon("+string.trim()+"100% 100%, 0 100%,0 100%)" ;
-		$('#code').html("clip-path: polygon("+string.trim()+"100% 100%, 0 100%,0 100%)");
 
-		function getValue(){
-		value = (Math.random() * scale);
+		$('#code').append("#"+id+" { clip-path: polygon("+string.trim()+"100% 100%, 0 100%,0 100%) }\n\n");
 
-		while (Math.abs(last - value) > smoothness) {
+		function getValue() {
 			value = (Math.random() * scale);
-			
-		}
-		return Math.floor(value);;
+
+			while (Math.abs(last - value) > smoothness) {
+				value = (Math.random() * scale);
+			}
+
+			return Math.floor(value);
+
 		}
 	}
-	
-
-	
 });
-
