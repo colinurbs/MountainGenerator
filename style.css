@@ -23,6 +23,9 @@ label {
 
 #party{
 	display: none;
+	animation: bg-animation 5s infinite;
+	text-shadow: 2px 2px 5px #666666;
+	border: none;
 }
 
 #mountain1,#mountain2,#mountain3 {
@@ -76,3 +79,56 @@ label {
 	height: 300px;
 }
 
+@-webkit-keyframes bg-animation {
+  0% {
+    background-color: red;
+  }
+  15% {
+    background-color: yellow;
+  }
+  30% {
+    background-color: green;
+  }
+  45% {
+    background-color: blue;
+  }
+  60% {
+    background-color: purple;
+  }
+  75% {
+    background-color: pink;
+  }
+  90% {
+    background-color: orange;
+  }
+  100% {
+    background-color: red;
+  }
+}
+
+@keyframes bg-animation {
+  0% {
+    background-color: red;
+  }
+  15% {
+    background-color: yellow;
+  }
+  30% {
+    background-color: green;
+  }
+  45% {
+    background-color: blue;
+  }
+  60% {
+    background-color: purple;
+  }
+  75% {
+    background-color: pink;
+  }
+  90% {
+    background-color: orange;
+  }
+  100% {
+    background-color: red;
+  }
+}
