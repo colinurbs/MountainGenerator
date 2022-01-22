@@ -64,7 +64,7 @@ $(document).ready(function(){
 		for (let i = 0; i < nodes; i++) {
 			string += step + '% ' + getValue() + 'px';
 			string +=', '
-			step = step + steps;
+			step = Math.floor(step + steps);
 			last = value;
 		}
 

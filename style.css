@@ -1,5 +1,4 @@
 h1 {
-	
 	color: white;
 	text-shadow: 2px 2px 5px #666666;
 	margin-top: 50px;
@@ -9,6 +8,7 @@ body {
 	font-size: 24px;
 	background: lightskyblue;
 	text-align: center;
+	color: black;
 }
 label {
 	display: block;
