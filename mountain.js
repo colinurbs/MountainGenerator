@@ -6,6 +6,12 @@ $(document).ready(function(){
 		makeMountains('mountain3');
 	});
 
+	$('#mountain-spacing').change(function(){
+		newMountainSpacing($('#mountain-spacing').val());
+	});
+	$('#mountain-spacing').change();
+	$('#generate').click();
+
 	$(document).on({
 	    mouseenter: function() {
 	        $("#party").fadeIn();
@@ -22,6 +28,12 @@ $(document).ready(function(){
 	$('#new-colors').click(function(){
 		newColors();
 	});
+
+	function newMountainSpacing(px) {
+		var newTop = 400 - px;
+		$('#mountain2').css('top', newTop + 'px');
+		$('#mountain3').css('top', ( newTop - px) +'px');
+	}
 
 	function doParty() {
 	 	makeMountains('mountain1');

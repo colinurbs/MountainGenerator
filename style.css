@@ -5,8 +5,8 @@ h1 {
 }	
 
 body {
-	font-size: 24px;
-	background: lightskyblue;
+	font-size: 18px;
+	background: #32aaf0;
 	text-align: center;
 	color: black;
 }
@@ -20,6 +20,21 @@ label {
 	min-height: 50px;
 	margin-top: 50px;
 }
+
+.form-group{
+position:relative;
+z-index: 10;
+}
+
+.modal-dialog {
+	max-width: 900px;
+}
+
+.slider{
+width:60% ;
+height:auto;
+}
+
 
 #party{
 	display: none;
