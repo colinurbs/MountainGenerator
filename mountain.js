@@ -57,14 +57,14 @@ $(document).ready(function(){
 		var scale = $('#scale').val();
 		var smoothness = $('#smooth').val();
 		var string = '';
-		var steps = 100 / nodes;
+		var steps = Math.floor(100 / nodes);
 		var step = 0;
 		var last = 0;
 		
 		for (let i = 0; i < nodes; i++) {
 			string += step + '% ' + getValue() + 'px';
 			string +=', '
-			step = Math.floor(step + steps);
+			step = step + steps;
 			last = value;
 		}
 
