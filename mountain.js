@@ -57,7 +57,7 @@ $(document).ready(function(){
 		var scale = $('#scale').val();
 		var smoothness = $('#smooth').val();
 		var string = '';
-		var steps = Math.floor(100 / nodes);
+		var steps = 100 / nodes;
 		var step = 0;
 		var last = 0;
 		
